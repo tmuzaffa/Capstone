@@ -50,15 +50,13 @@ This data set is  provided to us by Starbucks
 ## File Descriptions <a name="files"></a>
 
 
-
-
-data:
+## data:
 - The data for this project was provided by Starbucks Inc. Starbucks data set consisted of three files namely
 - portfolio.json
   -	profile.json
   -	transcript.json
 portfolio.json contained metadata about each offer, profile.json contained demographic data of users, and transcript.json contained transactional data. 
-portfolio.json:
+- portfolio.json:
 portfolio.json consisted of below features
   -	channels (methods used to send offer to users)
   -	difficulty (minimum spending before offer applies)
@@ -66,7 +64,7 @@ portfolio.json consisted of below features
   -	id  (offer id)
   -	offer_type  (type of offer sent  to users)
   -	reward ( reward to be applied during valid offer duration after difficulty level achieved)
-profile.json:
+- profile.json:
 profile.json consisted of below features
   -	age (age of user)
   -	became_member_on (user became member on that day)
@@ -74,62 +72,98 @@ profile.json consisted of below features
   -	id ( user id)
   -	income (income of user)
 
-transcript.json:
-profile.json consisted of below features
+- transcript.json:
+transcript.json consisted of below features
   -	event ( kind of event occurred, e.g. offer received, offer viewed, transaction made etc.)
   -	person (user id)
   -	time (time at which event occurred)
   -	value ( monetary value of the transaction)
 
+month_data.csv:
+- Month data csv can be found at this onedrive link >>https://sfuca0my.sharepoint.com/:x:/g/personal/tmuzaffa_sfu_ca/ERb7ZuA8zKJNnoZ7pzq2NzgB9jANzWcQoCm-Eg5LEuaWZg?e=wkGhrp
+- This was created after feature engineerig, and running data on the model
+
+new_profile.csv:
+- New profile was created after predicitng missing values
+
+all_offer_profile2.csv:
+- profile data catered to each profile
+
+Starbucks_Capstone_notebook.ipynb:
+- Contains the intro of the project provided by Udacity
+
+Readme.md:
+- Readme file
+
+Date processing.ipynb:
+- Contains explorary data analysis, use of gradient boosted tree to predict missing values
+
+All Offers.ipynb:
+- Contains analysis/visulaization of all offers
+
+gen_mod_pickle.dat
+- Saved model of gender
+income_mod.pickle.dat
+- Saved model of income
+age_mod.pickle.dat
+- Saved model of age
+
+Starbukcs Promotional Strategy.pdf
+- Report of the project
 
 
-
-Recommendation Engine:
-- Recommendations_with_IBM.py
-- Recommendations_with_IBM.ipynb
-
-
-app:
-- Recommendations_with_IBM.html.html
-
-
-
+transcipt.csv
+- Transactional data in csv format
 
 
 ## Analysis<a name="Analysis"></a>
 
-- By looking at the results of .describe(), we can see that the article_ids of both data frames  do not match with each other, df data frame has article id range from 0 to 1444, where as  df_content range from 0 to 1444.
-- The number of unique articles that have at least one interaction are 714
-- The number of unique articles on the IBM platform are 1051
-- The number of unique users are 5148
-- The number of user-article interactions are 45993
-- Since we have no information about the new user, so collaborative filtering will not be the best option, as we will not be able to compare and match with other users and provide recommendations, however we can use top rated recommendations, and just recommend top rated articles to new users, which might not be the best option as well, as new user might have already read those artilces. I think to deal with such a problem, we should use FunkSVD
-
-- As we have seen above that classes are highly imabalnced as there are lots of articles that user have no interacted with, as shown by the large proportion of class 0 as comapred to class 1. There might be some overfitting, as we have used 740 latent features, which makes the model complex and takes into account even small changes, however we can rectify that by making the model simpler and using less latent features. We can see above that the best accuracy of test, train sets can be achieved when we use approximately 100 latent features. If we use above, it leads to over fitting.
-
-Since we can only predict for 20 users, so above fitting might not be accurate representaiton for our prediction. A better metric will be the article recommendation and not article interaction. It could be that user never interacted with the article becuase they donot like the it, or may be user likes the articles but have no just interacted with it yet on the platform.
-
-We can also use A/B testing to see how our predictions are working. We can assign half users to control group and half to experimental group.
+- By using these model we were able to predict age, income, and gender of missing values in the data set. Below are the new age, gender, and  income distribution
+Now we can see the income distribution of the users with missing data, it is uniform distribution however our RMSE metric is very high 26188 but since the model is only relying on engineered features, and model has not insight into the characteristic of the data so this results is acceptable. 
+- Similarly we did the age prediction of the missing values. RMSE again was not favorable and was high 17.84 but as suggested above, model is relying on engineered features so the result is acceptable
+- Similarly we predicted the gender for missing values with F1 score of 0.59
 
 
 
 ## Charts<a name = "Charts"></a>
-![Histogram of user ineraction with articles](https://github.com/tmuzaffa/IBM-recommendation-engine-IBM-Watson/blob/master/01.png)
-![Accuracy vs. number of latent features](https://github.com/tmuzaffa/IBM-recommendation-engine-IBM-Watson/blob/master/02.png)
-![Accuracy vs number of latent features](https://github.com/tmuzaffa/IBM-recommendation-engine-IBM-Watson/blob/master/03.png)
+![Age distribution after prediction](https://github.com/tmuzaffa/IBM-recommendation-engine-IBM-Watson/blob/master/01.png)
+![Gender distribution after prediction donut chart](https://github.com/tmuzaffa/IBM-recommendation-engine-IBM-Watson/blob/master/02.png)
+![Gender distribution after prediction](https://github.com/tmuzaffa/IBM-recommendation-engine-IBM-Watson/blob/master/02.png)
+![Income distribution afer prediction](https://github.com/tmuzaffa/IBM-recommendation-engine-IBM-Watson/blob/master/03.png)
 
   
   
 ## Acknowledgements<a name="acknowledgements"></a>
 
-- This data set is  provided to us by IBM
+- This data set is  provided to us by Starbucks
 - .dsecribe() > https://www.geeksforgeeks.org/python-pandas-dataframe-describe-method/
 - Pyplot> https://matplotlib.org/3.1.1/gallery/pyplots/pyplot_text.html#sphx-glr-gallery-pyplots-pyplot-text-py
-
 - Remove/find duplicates > https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.duplicated.html
-
 - Nunique() > https://www.geeksforgeeks.org/python-pandas-dataframe-nunique/
 - Most frequent index > ### Ref: https://stackoverflow.com/questions/48590268/pandas-get-the-most-frequent-values-of-a-column/48590361
 - Unstack data frame > #Ref: https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.unstack.html
 - Setdiff1d  > https://docs.scipy.org/doc/numpy/reference/generated/numpy.setdiff1d.html
 - Linear Algebra > Ref: https://docs.scipy.org/doc/numpy/reference/routines.linalg.html
+- PCA > Ref: https://www.dezyre.com/data-science-in-python-tutorial/principal-component-analysis-tutorial
+- PCA2 > Ref: ftp://statgen.ncsu.edu/pub/thorne/molevoclass/AtchleyOct19.pdf
+- GridSearchCV > Ref:: https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html
+- Siau, K., & Yang, Y. (2017). Impact of Artificial Intelligence, Robotics, and Machine Learning on Sales and Marketing. Proceedings of the Twelfth Midwest Association for Information Systems Conference,, (p. 48). Springfield.
+- Sundsoy, R., Bjelland, J., Asif, M. I., Pentalnd, A., & Yves-Alexandre, d. M. (n.d.). Big Data-Driven Marketing: How Machine Learning Outperforms Marketers’ Gut-Feeling. In Social Computing, Behavioral-Cultural Modeling and Prediction. Springer.
+- Towardsdatascience. (n.d.). Retrieved from https://towardsdatascience.com/understanding-confusion-matrix-a9ad42dcfd62
+- Mean Squared Error > Ref: https://en.wikipedia.org/wiki/Mean_squared_error
+- F1 Score> Ref: https://en.wikipedia.org/wiki/F1_score
+- Precision and Recall > Ref:https://en.wikipedia.org/wiki/Precision_and_recall
+- XGBoost > Ref: https://xgboost.readthedocs.io/en/latest/python/python_api.html
+- Starbuck logo > Ref: https://en.wikipedia.org/wiki/Starbucks
+- Datetime > Ref: https://stackoverflow.com/questions/27506367/python-pandas-integer-yyyymmdd-to-datetime
+- Date Extraction > Ref: https://stackoverflow.com/questions/21954197/which-is-the-fastest-way-to-extract-day-month-and-year-from-a-given-date
+- Dictionary > Ref: https://stackoverflow.com/questions/46405974/extract-values-from-dictionaries-in-dataframe-columns
+- Pipe Character > Ref: https://stackoverflow.com/questions/5988665/pipe-character-in-python
+- Rename Dataframe > Ref: https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.rename.html
+- Rounding Number > Ref: https://www.knowledgehut.com/blog/programming/python-rounding-numbers
+- https://github.com/scikit-learn/scikit-learn/issues/3123
+- DataFrame > Ref: https://stackoverflow.com/questions/46405974/extract-values-from-dictionaries-in-dataframe-columns
+- HotEncoder > Ref: https://firecharmca.wordpress.com/2018/03/22/feature-engineering-categorical-value-onehotencoder-and-why-not/
+- LabelEncoder > Ref: https://stackoverflow.com/questions/53970350/valueerror-contains-new-labels-when-trying-to-label-encode-in-python
+
+
