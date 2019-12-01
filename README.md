@@ -45,12 +45,25 @@ The objective of this project is to combine transaction, demographics, and offer
 This data set is  provided to us by Starbucks
 
 ## Problem Statement<a name="problem"></a>
+The goal is to determine which demographics respond best to what type of offer so that they can be sent only that type of offer to maximize profitability.  We also want to make sure, not to send offers to customers who are already loyal to Starbucks brand as they will make purchases with or without offer, and to the customers who might stop purchasing because of offers as they might not want to participate in the company marketing campaign. The task involved in this project are the following:
+1)	Pre-process portfolio.json, profile.json, and transcript.json
+2)	Predict age, gender, and income distribution of missing data using gradient boosted tree regressor and classifier. 
+3)	Merge predicted data for missing values with known data
+4)	Do feature engineering to calculate monthly profits made for each offer type
+5)	Analyze monthly profits for each offer type and look at trends
+The final analysis are expected to shed light on the type of offer and demographics that Starbucks should target for maximum profitability.
 
+Metrics:
+ Metric used to see the best offer is monthly profit and number of transactions in that particular month. 
+Metrics used for data pre-processing are below
+•	Root Mean Squared Error (RMSE) (Wikipedia, n.d.)
+RMSE is a commonly used to optimize the models. Optimization of model involve minimizing 
+- F1 score 
 
 ## File Descriptions <a name="files"></a>
 
 
-## data:
+ data:
 - The data for this project was provided by Starbucks Inc. Starbucks data set consisted of three files namely
 - portfolio.json
   -	profile.json
@@ -80,7 +93,7 @@ transcript.json consisted of below features
   -	value ( monetary value of the transaction)
 
 month_data.csv:
-- Month data csv can be found at this onedrive link >>https://sfuca0my.sharepoint.com/:x:/g/personal/tmuzaffa_sfu_ca/ERb7ZuA8zKJNnoZ7pzq2NzgB9jANzWcQoCm-Eg5LEuaWZg?e=wkGhrp
+- Month data csv can be found at this onedrive link >>https://sfuca0-my.sharepoint.com/:x:/g/personal/tmuzaffa_sfu_ca/ERb7ZuA8zKJNnoZ7pzq2NzgB9jANzWcQoCm-Eg5LEuaWZg?e=wkGhrp
 - This was created after feature engineerig, and running data on the model
 
 new_profile.csv:
@@ -126,10 +139,10 @@ Now we can see the income distribution of the users with missing data, it is uni
 
 
 ## Charts<a name = "Charts"></a>
-![Age distribution after prediction](https://github.com/tmuzaffa/IBM-recommendation-engine-IBM-Watson/blob/master/01.png)
-![Gender distribution after prediction donut chart](https://github.com/tmuzaffa/IBM-recommendation-engine-IBM-Watson/blob/master/02.png)
-![Gender distribution after prediction](https://github.com/tmuzaffa/IBM-recommendation-engine-IBM-Watson/blob/master/02.png)
-![Income distribution afer prediction](https://github.com/tmuzaffa/IBM-recommendation-engine-IBM-Watson/blob/master/03.png)
+![Age distribution after prediction](https://github.com/tmuzaffa/Capstone/blob/master/pic1.png)
+![Gender distribution after prediction donut chart](https://github.com/tmuzaffa/Capstone/blob/master/pic2.png)
+![Gender distribution after prediction](https://github.com/tmuzaffa/Capstone/blob/master/pic3.png)
+![Income distribution afer prediction](https://github.com/tmuzaffa/Capstone/blob/master/pic4.pngg)
 
   
   
