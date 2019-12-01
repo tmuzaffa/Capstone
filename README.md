@@ -55,31 +55,31 @@ This data set is  provided to us by Starbucks
 data:
 - The data for this project was provided by Starbucks Inc. Starbucks data set consisted of three files namely
 - portfolio.json
-  •	profile.json
-  •	transcript.json
+  -	profile.json
+  -	transcript.json
 portfolio.json contained metadata about each offer, profile.json contained demographic data of users, and transcript.json contained transactional data. 
 portfolio.json:
 portfolio.json consisted of below features
-  •	channels (methods used to send offer to users)
-  •	difficulty (minimum spending before offer applies)
-  •	duration (duration validity of offer)
-  •	id  (offer id)
-  •	offer_type  (type of offer sent  to users)
-  •	reward ( reward to be applied during valid offer duration after difficulty level achieved)
+  -	channels (methods used to send offer to users)
+  -	difficulty (minimum spending before offer applies)
+  -	duration (duration validity of offer)
+  -	id  (offer id)
+  -	offer_type  (type of offer sent  to users)
+  -	reward ( reward to be applied during valid offer duration after difficulty level achieved)
 profile.json:
 profile.json consisted of below features
-  •	age (age of user)
-  •	became_member_on (user became member on that day)
-  •	gender (gender of user)
-  •	id ( user id)
-  •	income (income of user)
+  -	age (age of user)
+  -	became_member_on (user became member on that day)
+  -	gender (gender of user)
+  -	id ( user id)
+  -	income (income of user)
 
 transcript.json:
 profile.json consisted of below features
-  •	event ( kind of event occurred, e.g. offer received, offer viewed, transaction made etc.)
-  •	person (user id)
-  •	time (time at which event occurred)
-  •	value ( monetary value of the transaction)
+  -	event ( kind of event occurred, e.g. offer received, offer viewed, transaction made etc.)
+  -	person (user id)
+  -	time (time at which event occurred)
+  -	value ( monetary value of the transaction)
 
 
 
