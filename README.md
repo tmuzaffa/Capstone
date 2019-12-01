@@ -7,10 +7,11 @@ Starbukcs Promotional strategy: A Machine Learning Approach
 1. [Libraries used for the project](#libraries)
 2. [Objective](#motivation)
 3. [Problem Statement](#Problem)
-3. [File Descriptions](#files)
-4. [Analysis](#Analysis)
-5. [Charts](#Charts)
-6. [Acknowledgements](#acknowledgements)
+4. [Metrics] (#metric)
+4. [File Descriptions](#files)
+5. [Analysis](#Analysis)
+6. [Charts](#Charts)
+7. [Acknowledgements](#acknowledgements)
 
 ## Libraries used for the project <a name="libraries"></a>
 
@@ -53,10 +54,10 @@ The goal is to determine which demographics respond best to what type of offer s
 5)	Analyze monthly profits for each offer type and look at trends
 The final analysis are expected to shed light on the type of offer and demographics that Starbucks should target for maximum profitability.
 
-Metrics:
+## Metrics: <a name="metric"></a>
  Metric used to see the best offer is monthly profit and number of transactions in that particular month. 
 Metrics used for data pre-processing are below
-•	Root Mean Squared Error (RMSE) (Wikipedia, n.d.)
+-	Root Mean Squared Error (RMSE) (Wikipedia, n.d.)
 RMSE is a commonly used to optimize the models. Optimization of model involve minimizing 
 - F1 score 
 
@@ -93,7 +94,7 @@ transcript.json consisted of below features
   -	value ( monetary value of the transaction)
 
 month_data.csv:
-- Month data csv can be found at this onedrive link >>https://sfuca0-my.sharepoint.com/:x:/g/personal/tmuzaffa_sfu_ca/ERb7ZuA8zKJNnoZ7pzq2NzgB9jANzWcQoCm-Eg5LEuaWZg?e=wkGhrp
+- Month data csv can be found at this google drive link >> https://drive.google.com/open?id=1xBSCFzOz3u4_acn9XshoDW1qZzMCU0SB
 - This was created after feature engineerig, and running data on the model
 
 new_profile.csv:
@@ -142,7 +143,7 @@ Now we can see the income distribution of the users with missing data, it is uni
 ![Age distribution after prediction](https://github.com/tmuzaffa/Capstone/blob/master/pic1.png)
 ![Gender distribution after prediction donut chart](https://github.com/tmuzaffa/Capstone/blob/master/pic2.png)
 ![Gender distribution after prediction](https://github.com/tmuzaffa/Capstone/blob/master/pic3.png)
-![Income distribution afer prediction](https://github.com/tmuzaffa/Capstone/blob/master/pic4.pngg)
+![Income distribution afer prediction](https://github.com/tmuzaffa/Capstone/blob/master/pic4.png)
 
   
   
