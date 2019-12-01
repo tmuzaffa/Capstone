@@ -1,6 +1,6 @@
 # Capstone
 Starbukcs Promotional strategy: A Machine Learning Approach
-$$\alpha$$
+
 ### Table of Contents
 
 1. [Libraries used for the project](#libraries)
